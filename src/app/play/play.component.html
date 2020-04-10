@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    
+    <span class="example-spacer"><span>Play</span></span>
+    <mat-icon *ngIf="canPlay" class="example-icon" aria-hidden="false" aria-label="Example delete icon" (click)="play()">
+    	play_arrow
+    </mat-icon>
+    
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<form class="example-form">
+  <div style="padding: 15px"></div>
+
+  <div *ngFor="let item of questionList">
+  	  <button style="width: 100%;" mat-flat-button color="{{item.color}}" (click)="answer(item)">
+  	  	{{item.name}}
+  	  </button>
+  	  <div style="padding: 12px"></div>
+  </div>
+
+  <div *ngFor="let item of userList">
+		<mat-grid-list cols="4" rowHeight="1:1">
+			<mat-grid-tile style="text-align: center; font-size: 12px" *ngFor="let user of item">{{user.userData.name}}<br> {{user.userData.pts}}</mat-grid-tile>
+		</mat-grid-list>
+		<div style="padding: 1px"></div>
+  </div>
+</form>

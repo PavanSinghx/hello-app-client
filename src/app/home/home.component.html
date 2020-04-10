@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    
+    <mat-icon class="example-icon" aria-hidden="false" (click)="generateLink()">add_box</mat-icon>
+    <span class="example-spacer"><span>Edit Profile</span></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon" (click)="refresh()">refresh</mat-icon>
+    
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<form class="example-form">
+	<div style="padding: 25%"></div>
+	<h1 style="margin: auto;text-align: center;font-size: 60px">{{score}}</h1>
+	<div style="padding: 20px"></div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Player name</mat-label>
+    <input matInput [(ngModel)]="name" name="nameInput">
+  </mat-form-field>
+  <div style="padding: 5px"></div>
+  <button style="width: 100%" mat-flat-button color="primary" (click)="save()">Save!</button>
+  <div style="padding: 10px"></div>
+  <mat-label>{{link}}</mat-label>
+</form>
