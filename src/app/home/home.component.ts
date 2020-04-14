@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   generateLink() {
   	var route = Math.floor(Math.random()*99999);
-  	this.link = location.hostname+"/#/play/"+route;
+  	this.link = location.href+"play/"+route;
   	localStorage.link = this.link;
   }
 
